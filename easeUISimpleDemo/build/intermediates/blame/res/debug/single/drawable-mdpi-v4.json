@@ -2,9 +2,5 @@
     {
         "merged": "D:\\android\\workSpace\\demoHx\\easeUISimpleDemo\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_launcher.png",
         "source": "D:\\android\\workSpace\\demoHx\\easeUISimpleDemo\\src\\main\\res\\drawable-mdpi\\ic_launcher.png"
-    },
-    {
-        "merged": "D:\\android\\workSpace\\demo\\easeUISimpleDemo\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_launcher.png",
-        "source": "D:\\android\\workSpace\\demo\\easeUISimpleDemo\\src\\main\\res\\drawable-mdpi\\ic_launcher.png"
     }
 ]

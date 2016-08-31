@@ -1,2 +1,2 @@
 <?xml version="1.0" encoding="utf-8"?>
-<merger version="3"><dataSet config="main"><source path="D:\android\workSpace\demo\easeUISimpleDemo\src\main\jniLibs"/></dataSet><dataSet config="debug"><source path="D:\android\workSpace\demo\easeUISimpleDemo\src\debug\jniLibs"/></dataSet></merger>
+<merger version="3"><dataSet config="main"><source path="D:\android\workSpace\demoHx\easeUISimpleDemo\src\main\jniLibs"/></dataSet><dataSet config="debug"><source path="D:\android\workSpace\demoHx\easeUISimpleDemo\src\debug\jniLibs"/></dataSet></merger>

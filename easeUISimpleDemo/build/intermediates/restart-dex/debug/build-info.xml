@@ -1,28 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <instant-run
     abi="armeabi-v7a,armeabi"
-    api-level="15"
-    density="hdpi"
+    api-level="23"
+    density="560dpi"
     format="7"
-    timestamp="3194608132529"
-    token="5882896987316663106" >
+    timestamp="14637117150973"
+    token="319925653511522427" >
 
     <task
         name="javac"
-        duration="0" />
+        duration="5552" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="0" />
+        duration="4295" />
     <task
         name="verifier"
-        duration="0" />
+        duration="585" />
 
-    <build timestamp="8554732407752" >
+    <artifact
+        location="D:\android\workSpace\demoHx\easeUISimpleDemo\build\outputs\apk\easeUISimpleDemo-debug.apk"
+        type="MAIN" />
+
+    <build timestamp="14637117150973" >
         <artifact
-            location="D:\android\workSpace\demo\easeUISimpleDemo\build\outputs\apk\easeUISimpleDemo-debug.apk"
+            location="D:\android\workSpace\demoHx\easeUISimpleDemo\build\outputs\apk\easeUISimpleDemo-debug.apk"
             type="MAIN" />
     </build>
 

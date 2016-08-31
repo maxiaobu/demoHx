@@ -2,88 +2,88 @@
 <items version="2" >
 
     <item
-        jar="D:\android\workSpace\demo\easeUISimpleDemo\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.0\jars\libs\internal_impl-23.0.0.jar"
+        jar="D:\android\workSpace\demoHx\easeUISimpleDemo\build\intermediates\exploded-aar\demoHx\easeUI_CN\unspecified\jars\libs\org.apache.http.legacy.jar"
         jumboMode="true"
         revision="24.0.0"
-        sha1="8bd336eeae661e8311330284897ee07f8ebaa297">
-        <dex dex="D:\android\workSpace\demo\easeUISimpleDemo\build\intermediates\pre-dexed\debug\internal_impl-23.0.0_3c98077831bc4d26fd3dddf0a1535d2626e3b3c6.jar" />
+        sha1="854d04e7fdca7b4e984d7c7f1ae9d32e25ba2bee">
+        <dex dex="D:\android\workSpace\demoHx\easeUISimpleDemo\build\intermediates\transforms\dex\debug\folders\1000\8\org.apache.http.legacy_3c6d5be4c37fcdfa74f2893bd6a1df4a305435d8\classes.dex" />
     </item>
     <item
-        jar="D:\android\workSpace\demo\easeUISimpleDemo\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.0\jars\classes.jar"
+        jar="D:\android\workSpace\demoHx\easeUISimpleDemo\build\intermediates\exploded-aar\demoHx\easeUI_CN\unspecified\jars\libs\MiPush_SDK_Client_2_2_19.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="11742cddb955b7c33ddad2aa49e12b52f16c4fc6">
+        <dex dex="D:\android\workSpace\demoHx\easeUISimpleDemo\build\intermediates\transforms\dex\debug\folders\1000\8\MiPush_SDK_Client_2_2_19_216780c9689b0093e06111aa19ea271be7b3853b\classes.dex" />
+    </item>
+    <item
+        jar="D:\android\workSpace\demoHx\easeUISimpleDemo\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.0\jars\classes.jar"
         jumboMode="true"
         revision="24.0.0"
         sha1="8413c27b45b7fe61dca4a98159f65e2cee215f5a">
-        <dex dex="D:\android\workSpace\demo\easeUISimpleDemo\build\intermediates\pre-dexed\debug\com.android.support-support-v4-23.0.0_938e4c671fc7f003f8d5b0b56e36a76cd3f40bce.jar" />
+        <dex dex="D:\android\workSpace\demoHx\easeUISimpleDemo\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-v4-23.0.0_62801eec01186d346234ad13bf7b773f7157f2af\classes.dex" />
     </item>
     <item
-        jar="D:\android\workSpace\demo\easeUISimpleDemo\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jar="D:\android\workSpace\demoHx\easeUISimpleDemo\build\intermediates\exploded-aar\demoHx\easeUI_CN\unspecified\jars\libs\google-play-services.jar"
         jumboMode="true"
         revision="24.0.0"
-        sha1="c8a40385f01e861c08bcbb4b9828b9fd5528cefc">
-        <dex dex="D:\android\workSpace\demo\easeUISimpleDemo\build\intermediates\pre-dexed\debug\instant-run-bootstrap_e563a2bd0e8b755266b6871d6eb8777c2309c55a.jar" />
+        sha1="fb6ce2b3c22e6be46d4faa525cfc7809bb5959a6">
+        <dex dex="D:\android\workSpace\demoHx\easeUISimpleDemo\build\intermediates\transforms\dex\debug\folders\1000\8\google-play-services_cde5a6b3ca5ab261af088e0e4a07c34b65d6f528\classes.dex" />
     </item>
     <item
-        jar="D:\android\workSpace\demo\easeUISimpleDemo\build\intermediates\exploded-aar\demo\easeUI_CN\unspecified\jars\libs\google-play-services.jar"
+        jar="D:\android\workSpace\demoHx\easeUISimpleDemo\build\intermediates\exploded-aar\demoHx\easeUI_CN\unspecified\jars\libs\glide-3.6.1.jar"
         jumboMode="true"
         revision="24.0.0"
-        sha1="138eb730c8e38d5ff0603a579e73b97a1f2a211f">
-        <dex dex="D:\android\workSpace\demo\easeUISimpleDemo\build\intermediates\pre-dexed\debug\google-play-services_6b12ac7b74d7c6dca4dd17d4fc7da9bde267536f.jar" />
+        sha1="ac08753b341e59cc45bec7be5ce44b618d504a53">
+        <dex dex="D:\android\workSpace\demoHx\easeUISimpleDemo\build\intermediates\transforms\dex\debug\folders\1000\8\glide-3.6.1_5affdc076d71b74a4f2227685406bfdae11c4613\classes.dex" />
     </item>
     <item
-        jar="D:\android\workSpace\demo\easeUISimpleDemo\build\intermediates\exploded-aar\demo\easeUI_CN\unspecified\jars\libs\HwPush_SDK_V2705_nomap.jar"
+        jar="D:\android\workSpace\demoHx\easeUISimpleDemo\build\intermediates\exploded-aar\demoHx\easeUI_CN\unspecified\jars\libs\hyphenatechat_3.1.4.jar"
         jumboMode="true"
         revision="24.0.0"
-        sha1="4e86f77f487b507b64ef7eb8903839e7f6a96c12">
-        <dex dex="D:\android\workSpace\demo\easeUISimpleDemo\build\intermediates\pre-dexed\debug\HwPush_SDK_V2705_nomap_4b14787f34320a4faa0daa1389120da698f927a3.jar" />
+        sha1="c418b0251d338daecee5278bab092ee3ecb7577d">
+        <dex dex="D:\android\workSpace\demoHx\easeUISimpleDemo\build\intermediates\transforms\dex\debug\folders\1000\8\hyphenatechat_3.1.4_4064567587c7dc2221bc48a6b7d3a5288aa6c2fe\classes.dex" />
     </item>
     <item
-        jar="D:\android\workSpace\demo\easeUISimpleDemo\build\intermediates\exploded-aar\demo\easeUI_CN\unspecified\jars\libs\org.apache.http.legacy.jar"
+        jar="D:\android\workSpace\demoHx\easeUISimpleDemo\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
         jumboMode="true"
         revision="24.0.0"
-        sha1="6202990957f5fa7485d937b6fbd9ef12f0279ace">
-        <dex dex="D:\android\workSpace\demo\easeUISimpleDemo\build\intermediates\pre-dexed\debug\org.apache.http.legacy_a28192a014b7a499f7298addc9bb19e89c1feec5.jar" />
+        sha1="885b5b2cdb1e41806301454d5dc988921d71242a">
+        <dex dex="D:\android\workSpace\demoHx\easeUISimpleDemo\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_9dd63dd2f2e1223d2a46f6a71740172f14bcdf49\classes.dex" />
     </item>
     <item
-        jar="C:\Users\maxiaobu\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\23.0.0\support-annotations-23.0.0.jar"
+        jar="D:\android\Android\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\23.0.0\support-annotations-23.0.0.jar"
         jumboMode="true"
         revision="24.0.0"
         sha1="990e7f98a7bad86a40b1f0bcfeb039023afd0839">
-        <dex dex="D:\android\workSpace\demo\easeUISimpleDemo\build\intermediates\pre-dexed\debug\support-annotations-23.0.0_6ba1529f30eb4e9039923f0de54b8bacc9de58a0.jar" />
+        <dex dex="D:\android\workSpace\demoHx\easeUISimpleDemo\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-23.0.0_0c0abfc120afb292586d63ca9dcfb746d3b95542\classes.dex" />
     </item>
     <item
-        jar="D:\android\workSpace\demo\easeUISimpleDemo\build\intermediates\exploded-aar\demo\easeUI_CN\unspecified\jars\libs\glide-3.6.1.jar"
+        jar="D:\android\workSpace\demoHx\easeUISimpleDemo\build\intermediates\exploded-aar\demoHx\easeUI_CN\unspecified\jars\libs\BaiduLBS_Android.jar"
         jumboMode="true"
         revision="24.0.0"
-        sha1="7fd79a220e16c36ed907248b309b3e0d9fb91bf4">
-        <dex dex="D:\android\workSpace\demo\easeUISimpleDemo\build\intermediates\pre-dexed\debug\glide-3.6.1_ca4e72b6f5f0b4350f53485febc285adf2e38c1b.jar" />
+        sha1="68049fff062586fcc854e7e5b6644387f5f3cc3f">
+        <dex dex="D:\android\workSpace\demoHx\easeUISimpleDemo\build\intermediates\transforms\dex\debug\folders\1000\8\BaiduLBS_Android_cd72d11c43b780d90a032166fc1d3079370526bf\classes.dex" />
     </item>
     <item
-        jar="D:\android\workSpace\demo\easeUISimpleDemo\build\intermediates\exploded-aar\demo\easeUI_CN\unspecified\jars\libs\BaiduLBS_Android.jar"
+        jar="D:\android\workSpace\demoHx\easeUISimpleDemo\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.0\jars\libs\internal_impl-23.0.0.jar"
         jumboMode="true"
         revision="24.0.0"
-        sha1="9356003330a22bcde9890d8f16981cceb6a65a17">
-        <dex dex="D:\android\workSpace\demo\easeUISimpleDemo\build\intermediates\pre-dexed\debug\BaiduLBS_Android_5dda73b037ce9837c0b8e42931d6eceee5e53b2a.jar" />
+        sha1="8bd336eeae661e8311330284897ee07f8ebaa297">
+        <dex dex="D:\android\workSpace\demoHx\easeUISimpleDemo\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-23.0.0_dfadde8645abde6cb3b7a1ed8c41d2e8d290b695\classes.dex" />
     </item>
     <item
-        jar="D:\android\workSpace\demo\easeUISimpleDemo\build\intermediates\exploded-aar\demo\easeUI_CN\unspecified\jars\libs\MiPush_SDK_Client_2_2_19.jar"
+        jar="D:\android\workSpace\demoHx\easeUISimpleDemo\build\intermediates\exploded-aar\demoHx\easeUI_CN\unspecified\jars\libs\HwPush_SDK_V2705_nomap.jar"
         jumboMode="true"
         revision="24.0.0"
-        sha1="ed194d0a42f42894bfdacdcaf224a19bf93b7e0a">
-        <dex dex="D:\android\workSpace\demo\easeUISimpleDemo\build\intermediates\pre-dexed\debug\MiPush_SDK_Client_2_2_19_b6b5499a5546fa0630466ccbca6da11449205300.jar" />
+        sha1="7a3274a1852b59cc38b924fc8353fbf5f185de2c">
+        <dex dex="D:\android\workSpace\demoHx\easeUISimpleDemo\build\intermediates\transforms\dex\debug\folders\1000\8\HwPush_SDK_V2705_nomap_cf62390f5d1a7624b309da9342c1077294c8da97\classes.dex" />
     </item>
     <item
-        jar="D:\android\workSpace\demo\easeUISimpleDemo\build\intermediates\exploded-aar\demo\easeUI_CN\unspecified\jars\libs\hyphenatechat_3.1.4.jar"
+        jar="D:\android\workSpace\demoHx\easeUISimpleDemo\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
         jumboMode="true"
         revision="24.0.0"
-        sha1="818a93fdf55d745b4b90c4b18b7b9441688d9cb7">
-        <dex dex="D:\android\workSpace\demo\easeUISimpleDemo\build\intermediates\pre-dexed\debug\hyphenatechat_3.1.4_60c669f00d74ca6cd7fed15971b10d1fe0f8c321.jar" />
-    </item>
-    <item
-        jar="D:\android\workSpace\demo\easeUISimpleDemo\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
-        jumboMode="true"
-        revision="24.0.0"
-        sha1="8ba3dcfb3a237ff0904ca5c8a89a3312de59941d">
-        <dex dex="D:\android\workSpace\demo\easeUISimpleDemo\build\intermediates\pre-dexed\debug\instant-run_ce22ac0e0d616873d68bf8702ccf1176ba6836a0.jar" />
+        sha1="7ee210c4b4f49451a4e662b3ec2012915bc98c82">
+        <dex dex="D:\android\workSpace\demoHx\easeUISimpleDemo\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_f70d94826d095e4ed804566d38579ef4b1c4c955\classes.dex" />
     </item>
 
 </items>

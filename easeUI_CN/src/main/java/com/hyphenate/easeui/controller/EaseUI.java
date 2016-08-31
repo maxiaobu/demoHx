@@ -34,34 +34,33 @@ public final class EaseUI {
      * the global EaseUI instance
      */
     private static EaseUI instance = null;
-    
+
     /**
      * 用户信息提供者
      * user profile provider
-     *
      */
     private EaseUserProfileProvider userProvider;
-    
+
     private EaseSettingsProvider settingsProvider;
-    
+
     /**
      * application 上下文
      * application context
      */
     private Context appContext = null;
-    
+
     /**
      * false sdk没有初始化
      * init flag: test if the sdk has been inited before, we don't need to init again
      */
     private boolean sdkInited = false;
-    
+
     /**
      * 通知者
      * the notifier
      */
     private EaseNotifier notifier = null;
-    
+
     /**
      * 注册了eventlistener 的aty的集合
      * save foreground Activity which registered eventlistener
@@ -71,59 +70,63 @@ public final class EaseUI {
     /**
      * 向下面集合添加aty
      * 注册了eventlistener 的aty的集合
+     *
      * @param activity
      */
-    public void pushActivity(Activity activity){
-        if(!activityList.contains(activity)){
-            activityList.add(0,activity); 
+    public void pushActivity(Activity activity) {
+        if (!activityList.contains(activity)) {
+            activityList.add(0, activity);
         }
     }
 
     /**
      * 向下面集合移除aty
      * 注册了eventlistener 的aty的集合
+     *
      * @param activity
      */
-    public void popActivity(Activity activity){
+    public void popActivity(Activity activity) {
         activityList.remove(activity);
     }
-    
-    
-    private EaseUI(){}
-    
+
+
+    private EaseUI() {
+    }
+
     /**
      * get EaseUI实例
      * get instance of EaseUI
+     *
      * @return
      */
-    public synchronized static EaseUI getInstance(){
-        if(instance == null){
+    public synchronized static EaseUI getInstance() {
+        if (instance == null) {
             instance = new EaseUI();
         }
         return instance;
     }
-    
+
     /**
      * 初始化sdk及easeUI kit
-     *this function will initialize the SDK and easeUI kit
-     * 
-     * @return boolean true if caller can continue to call SDK related APIs after calling onInit, otherwise false.
-     * 
+     * this function will initialize the SDK and easeUI kit
+     *
      * @param context
      * @param options use default if options is null
      * @return
      */
-    public synchronized boolean init(Context context, EMOptions options){
+    public synchronized boolean init(Context context, EMOptions options) {
 
-        if(sdkInited){
+        if (sdkInited) {
             //初始化过了不再初始化
             return true;
         }
         appContext = context;
-        
-        int pid = android.os.Process.myPid();//当前应用进程
-        String processAppName = getAppName(pid);
-        
+
+        int pid = android.os.Process.myPid();//当前进程名
+        String processAppName = getAppName(pid);//当前应用进程名
+        // 如果APP启用了远程的service，此application:onCreate会被调用2次
+        // 为了防止环信SDK被初始化2次，加此判断会保证SDK被初始化1次
+        // 默认的APP会在以包名为默认的process name下运行，如果查到的process name不是APP的process name就立即返回
         Log.d(TAG, "process app name : " + processAppName);
 
         // if there is application has remote service, application:onCreate() maybe called twice
@@ -134,42 +137,43 @@ public final class EaseUI {
             return false;
         }
         //初始化EMClient
-        if(options == null){
+        if (options == null) {
             EMClient.getInstance().init(context, initChatOptions());
-        }else{
+        } else {
             EMClient.getInstance().init(context, options);
         }
-        
+
         initNotifier();
         registerMessageListener();
-        
-        if(settingsProvider == null){
+
+        if (settingsProvider == null) {
             settingsProvider = new DefaultSettingsProvider();
         }
-        
+
         sdkInited = true;//已经初始化过了
         return true;
     }
-    
 
-    protected EMOptions initChatOptions(){
+
+    protected EMOptions initChatOptions() {
         Log.d(TAG, "init HuanXin Options");
 
         EMOptions options = new EMOptions();
-        // change to need confirm contact invitation
+        // 默认添加好友时，是不需要验证的，改成需要验证
+        // TODO: 2016/8/31 现在是需要验证
         options.setAcceptInvitationAlways(false);
-        // set if need read ack
+        // set if need read ack如果需要阅读确认true
         options.setRequireAck(true);
-        // set if need delivery ack
+        // 如果需要交付确认
         options.setRequireDeliveryAck(false);
-        
+
         return options;
     }
 
     /**
      * 初始化通知这
      */
-    void initNotifier(){
+    void initNotifier() {
         notifier = createNotifier();
         notifier.init(appContext);
     }
@@ -179,68 +183,78 @@ public final class EaseUI {
      */
     private void registerMessageListener() {
         EMClient.getInstance().chatManager().addMessageListener(new EMMessageListener() {
-            
+
             @Override
             public void onMessageReceived(List<EMMessage> messages) {
                 EaseAtMessageHelper.get().parseMessages(messages);
             }
+
             @Override
             public void onMessageReadAckReceived(List<EMMessage> messages) {
-                
+
             }
+
             @Override
             public void onMessageDeliveryAckReceived(List<EMMessage> messages) {
             }
+
             @Override
             public void onMessageChanged(EMMessage message, Object change) {
-                
+
             }
+
             @Override
             public void onCmdMessageReceived(List<EMMessage> messages) {
-                
+
             }
         });
     }
-    
-    protected EaseNotifier createNotifier(){
+
+    protected EaseNotifier createNotifier() {
         return new EaseNotifier();
     }
-    
-    public EaseNotifier getNotifier(){
+
+    public EaseNotifier getNotifier() {
         return notifier;
     }
-    
-    public boolean hasForegroundActivies(){
+
+    public boolean hasForegroundActivies() {
         return activityList.size() != 0;
     }
-    
+
     /**
      * set user profile provider
+     *
      * @param userProvider
      */
-    public void setUserProfileProvider(EaseUserProfileProvider userProvider){
+    public void setUserProfileProvider(EaseUserProfileProvider userProvider) {
         this.userProvider = userProvider;
     }
-    
+
     /**
      * get user profile provider
+     *
      * @return
      */
-    public EaseUserProfileProvider getUserProfileProvider(){
+    public EaseUserProfileProvider getUserProfileProvider() {
         return userProvider;
     }
-    
-    public void setSettingsProvider(EaseSettingsProvider settingsProvider){
+
+    public void setSettingsProvider(EaseSettingsProvider settingsProvider) {
         this.settingsProvider = settingsProvider;
     }
-    
-    public EaseSettingsProvider getSettingsProvider(){
+
+    public EaseSettingsProvider getSettingsProvider() {
         return settingsProvider;
     }
-    
-    
+
+
     /**
-     * check the application process name if process name is not qualified, then we think it is a service process and we will not init SDK
+     * 如何获取processAppName请参考以下方法。
+     *
+     * check the application process name if process name is not qualified, then we think
+     * it is a service process and we will not init SDK
+     *
      * @param pID
      * @return
      */
@@ -267,74 +281,80 @@ public final class EaseUI {
         }
         return processName;
     }
-    
+
     /**
      * User profile provider
-     * @author wei
      *
+     * @author wei
      */
     public interface EaseUserProfileProvider {
         /**
          * return EaseUser for input username
+         *
          * @param username
          * @return
          */
         EaseUser getUser(String username);
     }
-    
+
     /**
      * Emojicon provider
-     *
      */
     public interface EaseEmojiconInfoProvider {
         /**
          * return EaseEmojicon for input emojiconIdentityCode
+         *
          * @param emojiconIdentityCode
          * @return
          */
         EaseEmojicon getEmojiconInfo(String emojiconIdentityCode);
-        
+
         /**
          * get Emojicon map, key is the text of emoji, value is the resource id or local path of emoji icon(can't be URL on internet)
+         *
          * @return
          */
         Map<String, Object> getTextEmojiconMapping();
     }
-    
+
     private EaseEmojiconInfoProvider emojiconInfoProvider;
-    
+
     /**
      * Emojicon provider
+     *
      * @return
      */
-    public EaseEmojiconInfoProvider getEmojiconInfoProvider(){
+    public EaseEmojiconInfoProvider getEmojiconInfoProvider() {
         return emojiconInfoProvider;
     }
-    
+
     /**
      * set Emojicon provider
+     *
      * @param emojiconInfoProvider
      */
-    public void setEmojiconInfoProvider(EaseEmojiconInfoProvider emojiconInfoProvider){
+    public void setEmojiconInfoProvider(EaseEmojiconInfoProvider emojiconInfoProvider) {
         this.emojiconInfoProvider = emojiconInfoProvider;
     }
-    
+
     /**
      * new message options provider
-     *
      */
     public interface EaseSettingsProvider {
         boolean isMsgNotifyAllowed(EMMessage message);
+
         boolean isMsgSoundAllowed(EMMessage message);
+
         boolean isMsgVibrateAllowed(EMMessage message);
+
         boolean isSpeakerOpened();
     }
-    
+
     /**
      * 默认设置提供者
      * default settings provider
      */
-    protected class DefaultSettingsProvider implements EaseSettingsProvider{
+    protected class DefaultSettingsProvider implements EaseSettingsProvider {
 
         @Override
         public boolean isMsgNotifyAllowed(EMMessage message) {
@@ -354,10 +374,10 @@ public final class EaseUI {
         @Override
         public boolean isSpeakerOpened() {
             return true;
-        } 
+        }
     }
-    
-    public Context getContext(){
+
+    public Context getContext() {
         return appContext;
     }
 }

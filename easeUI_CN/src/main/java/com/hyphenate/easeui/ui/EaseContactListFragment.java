@@ -50,6 +50,7 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 /**
+ * 通讯录列表
  * contact list
  * 
  */

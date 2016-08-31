@@ -22,6 +22,7 @@ public class LoginActivity extends EaseBaseActivity{
         super.onCreate(arg0);
         if(EMClient.getInstance().isLoggedInBefore()){
             //enter to main activity directly if you logged in before.
+            //之前登录过直接进入
             startActivity(new Intent(this, MainActivity.class));
             finish();
         }

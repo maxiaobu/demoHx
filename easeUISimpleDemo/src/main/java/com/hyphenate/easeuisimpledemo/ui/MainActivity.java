@@ -24,9 +24,22 @@ import com.hyphenate.easeuisimpledemo.R;
 
 public class MainActivity extends EaseBaseActivity{
     private TextView unreadLabel;
+    /**
+     * 底部导航栏
+     * 0会话1通讯录2设置
+     */
     private Button[] mTabs;
+    /**
+     * 会话页面
+     */
     private EaseConversationListFragment conversationListFragment;
+    /**
+     * 通讯录页面
+     */
     private EaseContactListFragment contactListFragment;
+    /**
+     * 设置页面
+     */
     private SettingsFragment settingFragment;
     private Fragment[] fragments;
     private int index;
@@ -48,7 +61,8 @@ public class MainActivity extends EaseBaseActivity{
         conversationListFragment = new EaseConversationListFragment();
         contactListFragment = new EaseContactListFragment();
         settingFragment = new SettingsFragment();
-        contactListFragment.setContactsMap(getContacts());
+        contactListFragment.setContactsMap(getContacts());//获取联系人列表
+        //设置会话itemClick
         conversationListFragment.setConversationListItemClickListener(new EaseConversationListItemClickListener() {
             
             @Override
@@ -56,6 +70,7 @@ public class MainActivity extends EaseBaseActivity{
                 startActivity(new Intent(MainActivity.this, ChatActivity.class).putExtra(EaseConstant.EXTRA_USER_ID, conversation.getUserName()));
             }
         });
+        //
         contactListFragment.setContactListItemClickListener(new EaseContactListItemClickListener() {
             
             @Override
@@ -102,9 +117,11 @@ public class MainActivity extends EaseBaseActivity{
     }
     
     /**
+     * 返回假联系人列表 测试用
+     * 联系人自己获取,通过此方法填充
      * prepared users, password is "123456"
      * you can use these user to test
-     * @return
+     * @return contacts Map<String, EaseUser>
      */
     private Map<String, EaseUser> getContacts(){
         Map<String, EaseUser> contacts = new HashMap<String, EaseUser>();

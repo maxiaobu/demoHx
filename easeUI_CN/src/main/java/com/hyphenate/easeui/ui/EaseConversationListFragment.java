@@ -35,6 +35,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
+ * 会话列表
  * conversation list fragment
  *
  */
