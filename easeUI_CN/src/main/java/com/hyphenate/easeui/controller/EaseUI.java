@@ -147,7 +147,7 @@ public final class EaseUI {
             settingsProvider = new DefaultSettingsProvider();
         }
         
-        sdkInited = true;
+        sdkInited = true;//已经初始化过了
         return true;
     }
     
@@ -173,7 +173,10 @@ public final class EaseUI {
         notifier = createNotifier();
         notifier.init(appContext);
     }
-    
+
+    /**
+     * 注册消息监听
+     */
     private void registerMessageListener() {
         EMClient.getInstance().chatManager().addMessageListener(new EMMessageListener() {
             
@@ -213,7 +216,7 @@ public final class EaseUI {
     
     /**
      * set user profile provider
-     * @param provider
+     * @param userProvider
      */
     public void setUserProfileProvider(EaseUserProfileProvider userProvider){
         this.userProvider = userProvider;
@@ -328,14 +331,13 @@ public final class EaseUI {
     }
     
     /**
+     * 默认设置提供者
      * default settings provider
-     *
      */
     protected class DefaultSettingsProvider implements EaseSettingsProvider{
 
         @Override
         public boolean isMsgNotifyAllowed(EMMessage message) {
-            // TODO Auto-generated method stub
             return true;
         }
 
