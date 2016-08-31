@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "D:\\android\\workSpace\\demoHx\\easeUI_CN\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_launcher.png",
+        "source": "D:\\android\\workSpace\\demoHx\\easeUI_CN\\src\\main\\res\\drawable-mdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "D:\\android\\workSpace\\demo\\easeUI_CN\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_launcher.png",
+        "source": "D:\\android\\workSpace\\demo\\easeUI_CN\\src\\main\\res\\drawable-mdpi\\ic_launcher.png"
+    }
+]

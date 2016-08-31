@@ -1,0 +1,2 @@
+include ':easeUI_CN'
+include ':easeUISimpleDemo'
